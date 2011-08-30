@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home/tedeh/work/involvement'
+let g:netrw_dirhist_2='/home/tedeh/work/linser'
+let g:netrw_dirhist_3='/home/tedeh/work/linser/asdf'
+let g:netrw_dirhist_4='/home/tedeh/work/linser'
+let g:netrw_dirhist_5='/home/tedeh/.vim'
+let g:netrw_dirhist_6='/home/tedeh/work/involvement/master'
+let g:netrw_dirhist_7='/home/tedeh/.vim'

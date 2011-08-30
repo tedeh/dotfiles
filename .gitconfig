@@ -1,0 +1,7 @@
+[color]
+	ui = true
+[user]
+	name = Tedde Lundgren
+	email = mail@tedeh.net
+[core]
+	editor = vim
