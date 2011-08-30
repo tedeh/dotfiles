@@ -1,0 +1,6 @@
+--type-set=bin=.sock
+--nobin
+--type-add=js=.jade
+--type-set=pdf=.pdf
+--type-add=css=.scss
+--nopdf
