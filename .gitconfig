@@ -5,3 +5,4 @@
 	email = mail@tedeh.net
 [core]
 	editor = vim
+	excludesfile = /home/tedeh/.gitignore
