@@ -14,3 +14,4 @@ set number
 autocmd BufEnter capfile set filetype=ruby
 set incsearch
 set hlsearch
+set foldlevelstart=99
