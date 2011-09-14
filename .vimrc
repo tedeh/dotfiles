@@ -11,10 +11,10 @@ set shiftwidth=2
 set smartindent
 set autoindent
 set number
-autocmd BufEnter capfile set filetype=ruby
-autocmd BufEnter *.scss set filetype=css
 set incsearch
 set hlsearch
 set foldlevelstart=99
 autocmd WinLeave * set nocursorline nocursorcolumn
 autocmd WinEnter * set cursorline cursorcolumn
+autocmd BufRead,BufNewFile capfile set filetype=ruby
+autocmd BufRead,BufNewFile *.scss set filetype=scss
