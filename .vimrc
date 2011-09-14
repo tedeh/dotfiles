@@ -16,8 +16,5 @@ autocmd BufEnter *.scss set filetype=css
 set incsearch
 set hlsearch
 set foldlevelstart=99
-au WinLeave * set nocursorline nocursorcolumn
-au WinEnter * set cursorline cursorcolumn
-set cursorline cursorcolumn
-hi CursorColumn cterm=NONE ctermbg=38
-hi CursorLine cterm=NONE ctermbg=38
+autocmd WinLeave * set nocursorline nocursorcolumn
+autocmd WinEnter * set cursorline cursorcolumn
