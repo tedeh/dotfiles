@@ -14,7 +14,5 @@ set number
 set incsearch
 set hlsearch
 set foldlevelstart=99
-autocmd WinLeave * set nocursorline nocursorcolumn
-autocmd WinEnter * set cursorline cursorcolumn
 autocmd BufRead,BufNewFile capfile set filetype=ruby
 autocmd BufRead,BufNewFile *.scss set filetype=scss
