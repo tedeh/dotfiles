@@ -1,6 +1,6 @@
 filetype on
 syntax enable
-map <F2> :NERDTreeToggle<CR>
+map <F2> :NERDTreeTabsToggle<CR>
 map <F3> :tabp<CR>
 map <F4> :tabn<CR>
 set term=xterm-256color
@@ -16,3 +16,4 @@ set hlsearch
 set foldlevelstart=99
 autocmd BufRead,BufNewFile capfile set filetype=ruby
 autocmd BufRead,BufNewFile *.scss set filetype=scss
+autocmd BufRead,BufNewFile * set foldmethod=manual
