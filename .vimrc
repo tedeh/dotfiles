@@ -14,6 +14,9 @@ set number
 set incsearch
 set hlsearch
 set foldlevelstart=99
+set noshowmatch
+set showmode
+set scrolloff=4
 autocmd BufRead,BufNewFile capfile set filetype=ruby
 autocmd BufRead,BufNewFile *.scss set filetype=scss
 autocmd BufRead,BufNewFile * set foldmethod=manual
