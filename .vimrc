@@ -1,8 +1,9 @@
 filetype on
 syntax enable
-map <F2> :NERDTreeTabsToggle<CR>
-map <F3> :tabp<CR>
-map <F4> :tabn<CR>
+map <F3> :FufFile<CR>
+map <F4> :NERDTreeTabsToggle<CR>
+map <F5> :tabp<CR>
+map <F6> :tabn<CR>
 set term=xterm-256color
 set expandtab
 set tabstop=2
