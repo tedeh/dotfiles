@@ -261,3 +261,5 @@ report.next.filter=status:pending limit:page
 #report.next.dateformat=m/d/Y
 #report.next.annotations=full
 
+# Färgtema
+include /usr/share/task/light-256.theme
