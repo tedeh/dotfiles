@@ -22,3 +22,5 @@ set t_Co=256
 autocmd BufRead,BufNewFile capfile set filetype=ruby
 autocmd BufRead,BufNewFile *.scss set filetype=scss
 autocmd BufRead,BufNewFile * set foldmethod=manual
+autocmd BufRead,BufNewFile *.php source ~/.vim/plugin/closetag.vim
+autocmd Filetype html,xml,xsl,php source ~/.vim/plugin/closetag.vim 
