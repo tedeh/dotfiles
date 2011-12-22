@@ -7,3 +7,4 @@
 	editor = vim
 	excludesfile = /home/tedeh/.gitignore
   filemode = false
+	ignore = dirty
