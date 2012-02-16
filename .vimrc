@@ -31,6 +31,9 @@ set showmode
 set scrolloff=4
 set t_Co=256
 
+" Markera 80:e kolumnen
+" "set colorcolumn=80
+
 " Specifika filtyper
 autocmd BufRead,BufNewFile capfile set filetype=ruby
 autocmd BufRead,BufNewFile *.scss set filetype=scss
