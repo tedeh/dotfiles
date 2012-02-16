@@ -262,5 +262,5 @@ report.next.filter=status:pending limit:page
 #report.next.annotations=full
 
 # Färgtema
-# include /usr/share/task/light-256.theme
-include /usr/share/task/dark-256.theme
+include /usr/share/task/light-256.theme
+#include /usr/share/task/dark-256.theme
