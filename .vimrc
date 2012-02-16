@@ -36,5 +36,6 @@ set t_Co=256
 
 " Specifika filtyper
 autocmd BufRead,BufNewFile capfile set filetype=ruby
+autocmd BufRead,BufNewFile Capfile set filetype=ruby
 autocmd BufRead,BufNewFile *.scss set filetype=scss
 autocmd BufRead,BufNewFile * set foldmethod=manual
