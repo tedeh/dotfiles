@@ -5,6 +5,8 @@ autoload -U compinit && compinit
 setopt completealiases appendhistory autocd extendedglob nomatch notify
 unsetopt beep
 
+bindkey -v
+
 zstyle ':completion:*' menu select
 
 EDITOR=vim
