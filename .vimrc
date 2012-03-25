@@ -32,7 +32,7 @@ set scrolloff=4
 set t_Co=256
 
 " Markera 80:e kolumnen
-" "set colorcolumn=80
+" set colorcolumn=80
 
 " Specifika filtyper
 autocmd BufRead,BufNewFile capfile set filetype=ruby
