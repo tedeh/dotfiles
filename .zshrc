@@ -6,6 +6,7 @@ setopt completealiases appendhistory autocd extendedglob nomatch notify
 unsetopt beep
 
 bindkey -v
+bindkey '^R' history-incremental-search-backward
 
 zstyle ':completion:*' menu select
 
