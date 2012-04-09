@@ -1,13 +1,13 @@
 filetype on
 syntax enable
 
-" Bindings för F-knapparna
+" Bindings for the F-buttons
 map <F3> :FufFile<CR>
 map <F4> :FufRenewCache<CR>
 map <F5> :tabp<CR>
 map <F6> :tabn<CR>
 
-" Så att vi kan byta pane som med Ctrl + hjkl
+" Switch pane with Ctrl + h/j/k/l
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
@@ -31,12 +31,13 @@ set showmode
 set scrolloff=4
 set t_Co=256
 
-" Markera 80:e kolumnen
-" "set colorcolumn=80
+" Highlight the 80:th column
+" set colorcolumn=80
 
-" Specifika filtyper
+" Autocmds for specific file types
 autocmd BufRead,BufNewFile capfile set filetype=ruby
 autocmd BufRead,BufNewFile Capfile set filetype=ruby
 autocmd BufRead,BufNewFile *.scss set filetype=scss
 autocmd BufRead,BufNewFile * set foldmethod=manual
+" Use tabs for indentation when editing Makefiles
 autocmd FileType make setlocal noexpandtab
