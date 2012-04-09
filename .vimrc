@@ -39,3 +39,4 @@ autocmd BufRead,BufNewFile capfile set filetype=ruby
 autocmd BufRead,BufNewFile Capfile set filetype=ruby
 autocmd BufRead,BufNewFile *.scss set filetype=scss
 autocmd BufRead,BufNewFile * set foldmethod=manual
+autocmd FileType make setlocal noexpandtab
