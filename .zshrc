@@ -11,7 +11,7 @@ bindkey '^R' history-incremental-search-backward
 zstyle ':completion:*' menu select
 
 EDITOR=vim
-PROMPT="%{$fg[green]%}%n%{$reset_color%} %{$fg[blue]%}%~%{$reset_color%} %{$fg[yellow]%}%#%{$reset_color%} "
+PROMPT="%{$fg[green]%}%n@%m%{$reset_color%} %{$fg[blue]%}%~%{$reset_color%} %{$fg[yellow]%}%#%{$reset_color%} "
 RPROMPT="[%{$fg[yellow]%}%?%{$reset_color%}]"
 
 HISTFILE=~/.histfile
