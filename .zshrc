@@ -7,6 +7,8 @@ unsetopt beep
 
 bindkey -v
 bindkey '^R' history-incremental-search-backward
+bindkey '^[[A' up-line-or-history
+bindkey '^[[B' down-line-or-history
 
 zstyle ':completion:*' menu select
 
