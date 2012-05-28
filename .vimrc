@@ -1,4 +1,28 @@
-filetype on
+" Vundle setup
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" Vundle bundle
+Bundle 'gmarik/vundle'
+Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-ragtag'
+Bundle 'tpope/vim-surround'
+Bundle 'digitaltoad/vim-jade'
+Bundle 'cakebaker/scss-syntax.vim'
+Bundle 'vim-scripts/FuzzyFinder'
+Bundle 'vim-scripts/L9'
+Bundle 'vim-scripts/taglist.vim'
+Bundle 'vim-scripts/php.vim--Garvin'
+Bundle 'pangloss/vim-javascript'
+Bundle 'othree/xml.vim'
+Bundle 'Townk/vim-autoclose'
+Bundle 'leshill/vim-json'
+
+filetype plugin indent on
+
+" Syntax highlighting
 syntax enable
 
 " Bindings for the F-buttons
@@ -13,6 +37,7 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
+set nocompatible
 set term=xterm-256color
 set expandtab
 set tabstop=2
@@ -31,13 +56,12 @@ set showmode
 set scrolloff=4
 set t_Co=256
 
-" Highlight the 80:th column
-" set colorcolumn=80
-
-" Autocmds for specific file types
+" Autocmds for specific files
 autocmd BufRead,BufNewFile capfile set filetype=ruby
 autocmd BufRead,BufNewFile Capfile set filetype=ruby
 autocmd BufRead,BufNewFile *.scss set filetype=scss
 autocmd BufRead,BufNewFile * set foldmethod=manual
+
 " Use tabs for indentation when editing Makefiles
 autocmd FileType make setlocal noexpandtab
+

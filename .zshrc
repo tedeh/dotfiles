@@ -2,7 +2,7 @@ autoload -U colors && colors
 autoload -U promptinit && promptinit
 autoload -U compinit && compinit
 
-setopt completealiases appendhistory autocd extendedglob nomatch notify
+setopt completealiases appendhistory autocd extendedglob nomatch notify list_ambiguous
 unsetopt beep
 
 bindkey -v
