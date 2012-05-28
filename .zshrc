@@ -11,9 +11,12 @@ bindkey '^[[A' up-line-or-history
 bindkey '^[[B' down-line-or-history
 
 zstyle ':completion:*' menu select
+zstyle ':completion:*' verbose yes
+zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
+zstyle ':completion:*' group-name ''
 
 EDITOR=vim
-PROMPT="%{$fg[green]%}%n@%m%{$reset_color%} %{$fg[blue]%}%~%{$reset_color%} %{$fg[yellow]%}%#%{$reset_color%} "
+PROMPT="%{$fg[green]%}%n@%M%{$reset_color%} %{$fg[blue]%}%~%{$reset_color%} %{$fg[yellow]%}%#%{$reset_color%} "
 RPROMPT="[%{$fg[yellow]%}%?%{$reset_color%}]"
 
 HISTFILE=~/.histfile
