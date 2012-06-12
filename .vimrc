@@ -54,6 +54,7 @@ set foldlevelstart=99
 set noshowmatch
 set showmode
 set scrolloff=4
+set backspace=2
 set t_Co=256
 
 " Autocmds for specific files
