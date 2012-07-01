@@ -6,6 +6,7 @@ call vundle#rc()
 
 " Vundle bundle
 Bundle 'gmarik/vundle'
+Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-ragtag'
 Bundle 'tpope/vim-surround'
@@ -19,6 +20,7 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'othree/xml.vim'
 Bundle 'Townk/vim-autoclose'
 Bundle 'leshill/vim-json'
+Bundle 'myusuf3/numbers.vim'
 
 filetype plugin indent on
 
@@ -56,6 +58,9 @@ set showmode
 set scrolloff=4
 set backspace=2
 set t_Co=256
+set laststatus=2
+
+let g:Powerline_symbols = 'fancy'
 
 " Autocmds for specific files
 autocmd BufRead,BufNewFile capfile set filetype=ruby
