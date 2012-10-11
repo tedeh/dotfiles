@@ -22,6 +22,7 @@ Bundle 'Townk/vim-autoclose'
 Bundle 'leshill/vim-json'
 Bundle 'myusuf3/numbers.vim'
 Bundle 'tobyS/vip'
+Bundle 'vim-scripts/svg.vim'
 
 filetype plugin indent on
 
