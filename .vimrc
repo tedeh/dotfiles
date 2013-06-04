@@ -8,7 +8,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-markdown'
-Bundle 'tpope/vim-ragtag'
+" Bundle 'tpope/vim-ragtag'
 Bundle 'tpope/vim-surround'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'cakebaker/scss-syntax.vim'
@@ -20,9 +20,12 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'othree/xml.vim'
 Bundle 'Townk/vim-autoclose'
 Bundle 'leshill/vim-json'
-Bundle 'myusuf3/numbers.vim'
+"Bundle 'myusuf3/numbers.vim'
 Bundle 'tobyS/vip'
 Bundle 'vim-scripts/svg.vim'
+Bundle 'gregsexton/MatchTag'
+Bundle 'othree/html5.vim'
+Bundle 'kchmck/vim-coffee-script'
 
 filetype plugin indent on
 
@@ -61,6 +64,7 @@ set scrolloff=4
 set backspace=2
 set t_Co=256
 set laststatus=2
+set relativenumber
 
 let g:Powerline_symbols = 'fancy'
 

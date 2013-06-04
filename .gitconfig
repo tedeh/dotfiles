@@ -8,3 +8,5 @@
 	excludesfile = /home/tedeh/.gitignore
   filemode = false
 	ignore = dirty
+[push]
+	default = simple
