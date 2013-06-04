@@ -20,7 +20,7 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'othree/xml.vim'
 Bundle 'Townk/vim-autoclose'
 Bundle 'leshill/vim-json'
-"Bundle 'myusuf3/numbers.vim'
+Bundle 'myusuf3/numbers.vim'
 Bundle 'tobyS/vip'
 Bundle 'vim-scripts/svg.vim'
 Bundle 'gregsexton/MatchTag'
@@ -64,7 +64,7 @@ set scrolloff=4
 set backspace=2
 set t_Co=256
 set laststatus=2
-set relativenumber
+" set relativenumber Will be back to this when it WORKS
 
 let g:Powerline_symbols = 'fancy'
 
