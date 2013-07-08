@@ -16,7 +16,7 @@ zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
 zstyle ':completion:*' group-name ''
 
 EDITOR=vim
-PROMPT="%{$fg[green]%}%n@%M%{$reset_color%} %{$fg[blue]%}%~%{$reset_color%} %{$fg[yellow]%}%#%{$reset_color%} "
+PROMPT="%{$fg[green]%}%n@%M%{$reset_color%} %{$fg[blue]%}%~%{$reset_color%} %{$fg[yellow]%}λ%{$reset_color%} "
 RPROMPT="[%{$fg[yellow]%}%?%{$reset_color%}]"
 
 HISTFILE=~/.histfile
