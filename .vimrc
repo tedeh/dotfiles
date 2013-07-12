@@ -35,7 +35,7 @@ syntax enable
 map <F1> :FufRenewCache<CR>
 map <F2> :set invpaste paste?<CR>
 map <F3> :FufFile<CR>
-map <F4> :FufBufferTagAll<CR>
+map <F4> :FufBufferTag<CR>
 map <F5> :tabp<CR>
 map <F6> :tabn<CR>
 
