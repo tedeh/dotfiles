@@ -6,7 +6,7 @@ call vundle#rc()
 
 " Vundle bundle
 Bundle 'gmarik/vundle'
-Bundle 'Lokaltog/vim-powerline'
+Bundle 'bling/vim-airline'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-surround'
 Bundle 'digitaltoad/vim-jade'
@@ -68,7 +68,7 @@ set laststatus=2
 set tags=./tags,/
 " set relativenumber Will be back to this when it WORKS
 
-let g:Powerline_symbols = 'fancy'
+let g:airline_powerline_fonts = 1
 
 " Autocmds for specific files
 autocmd BufRead,BufNewFile capfile set filetype=ruby
