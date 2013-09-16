@@ -3,4 +3,6 @@
 --type-add=js=.jade
 --type-set=pdf=.pdf
 --type-add=css=.scss
+--type-set=ignore=.scssc
+--noignore
 --nopdf

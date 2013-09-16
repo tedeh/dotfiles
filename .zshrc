@@ -32,3 +32,7 @@ alias lsof='lsof -P'
 if [[ -r ~/.zshrc.local ]]; then
   source ~/.zshrc.local
 fi
+
+# Make all entries in $path unique
+typeset -aU path
+path=($path)

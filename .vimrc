@@ -58,7 +58,8 @@ set incsearch
 set hlsearch
 set ignorecase
 set smartcase
-set foldlevelstart=99
+"set foldlevelstart=99
+set foldnestmax=1
 set noshowmatch
 set showmode
 set scrolloff=4
@@ -69,6 +70,7 @@ set tags=./tags,/
 " set relativenumber Will be back to this when it WORKS
 
 let g:airline_powerline_fonts = 1
+let c_no_comment_fold = 1
 
 " Autocmds for specific files
 autocmd BufRead,BufNewFile capfile set filetype=ruby
@@ -76,6 +78,7 @@ autocmd BufRead,BufNewFile Capfile set filetype=ruby
 autocmd BufRead,BufNewFile *.scss set filetype=scss
 autocmd BufRead,BufNewFile *.plist set filetype=xml
 autocmd BufRead,BufNewFile * set foldmethod=manual
+"autocmd BufRead,BufNewFile *.js set foldmethod=syntax
 
 " Use tabs for indentation when editing Makefiles
 autocmd FileType make setlocal noexpandtab
