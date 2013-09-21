@@ -25,6 +25,7 @@ Bundle 'vim-scripts/svg.vim'
 Bundle 'gregsexton/MatchTag'
 Bundle 'othree/html5.vim'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'nono/vim-handlebars'
 
 filetype plugin indent on
 
