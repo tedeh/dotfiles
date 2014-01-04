@@ -74,12 +74,14 @@ let g:airline_powerline_fonts = 1
 let c_no_comment_fold = 1
 
 " Autocmds for specific files
-autocmd BufRead,BufNewFile capfile set filetype=ruby
 autocmd BufRead,BufNewFile Capfile set filetype=ruby
+autocmd BufRead,BufNewFile Vagrantfile set filetype=ruby
 autocmd BufRead,BufNewFile *.scss set filetype=scss
 autocmd BufRead,BufNewFile *.plist set filetype=xml
 autocmd BufRead,BufNewFile * set foldmethod=manual
 "autocmd BufRead,BufNewFile *.js set foldmethod=syntax
+autocmd BufWritePost,BufLeave,WinLeave *.* mkview!
+autocmd BufWinEnter *.* silent loadview
 
 " Use tabs for indentation when editing Makefiles
 autocmd FileType make setlocal noexpandtab
