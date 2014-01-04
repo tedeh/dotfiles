@@ -9,4 +9,4 @@
   filemode = false
 	ignore = dirty
 [push]
-	default = simple
+	default = current
