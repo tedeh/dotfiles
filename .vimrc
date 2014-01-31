@@ -26,6 +26,7 @@ Bundle 'gregsexton/MatchTag'
 Bundle 'othree/html5.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'nono/vim-handlebars'
+Bundle 'tomtom/tcomment_vim'
 
 filetype plugin indent on
 
@@ -85,4 +86,3 @@ autocmd BufWinEnter *.* silent loadview
 
 " Use tabs for indentation when editing Makefiles
 autocmd FileType make setlocal noexpandtab
-
