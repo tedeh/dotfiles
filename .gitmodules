@@ -2,3 +2,6 @@
 	path = .vim/bundle/vundle
 	url = https://github.com/gmarik/vundle.git
   ignore = dirty
+[submodule ".powerline"]
+	path = .powerline
+	url = https://github.com/Lokaltog/powerline.git

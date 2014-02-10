@@ -27,6 +27,7 @@ Bundle 'othree/html5.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'nono/vim-handlebars'
 Bundle 'tomtom/tcomment_vim'
+Bundle 'wavded/vim-stylus'
 
 filetype plugin indent on
 
@@ -63,7 +64,7 @@ set smartcase
 "set foldlevelstart=99
 set foldnestmax=1
 set noshowmatch
-set showmode
+set noshowmode
 set scrolloff=4
 set backspace=2
 set t_Co=256
@@ -77,12 +78,23 @@ let c_no_comment_fold = 1
 " Autocmds for specific files
 autocmd BufRead,BufNewFile Capfile set filetype=ruby
 autocmd BufRead,BufNewFile Vagrantfile set filetype=ruby
+autocmd BufRead,BufNewFile Dockerfile set filetype=conf
 autocmd BufRead,BufNewFile *.scss set filetype=scss
 autocmd BufRead,BufNewFile *.plist set filetype=xml
 autocmd BufRead,BufNewFile * set foldmethod=manual
 "autocmd BufRead,BufNewFile *.js set foldmethod=syntax
 autocmd BufWritePost,BufLeave,WinLeave *.* mkview!
 autocmd BufWinEnter *.* silent loadview
+
+" Prevent delay when exiting insert mode
+if ! has('gui_running')
+    set ttimeoutlen=10
+    augroup FastEscape
+        autocmd!
+        au InsertEnter * set timeoutlen=0
+        au InsertLeave * set timeoutlen=1000
+    augroup END
+endif
 
 " Use tabs for indentation when editing Makefiles
 autocmd FileType make setlocal noexpandtab
