@@ -83,8 +83,8 @@ autocmd BufRead,BufNewFile *.scss set filetype=scss
 autocmd BufRead,BufNewFile *.plist set filetype=xml
 autocmd BufRead,BufNewFile * set foldmethod=manual
 "autocmd BufRead,BufNewFile *.js set foldmethod=syntax
-autocmd BufWritePost,BufLeave,WinLeave *.* mkview!
-autocmd BufWinEnter *.* silent loadview
+"autocmd BufWritePost,BufLeave,WinLeave *.* mkview!
+"autocmd BufWinEnter *.* silent loadview
 
 " Prevent delay when exiting insert mode
 if ! has('gui_running')
