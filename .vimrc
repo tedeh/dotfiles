@@ -28,6 +28,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'nono/vim-handlebars'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'wavded/vim-stylus'
+Bundle 'chase/vim-ansible-yaml'
 
 filetype plugin indent on
 
