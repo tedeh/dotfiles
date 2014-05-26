@@ -5,3 +5,6 @@
 [submodule ".powerline"]
 	path = .powerline
 	url = https://github.com/Lokaltog/powerline.git
+[submodule "modules/docker-zsh-completion"]
+	path = modules/docker-zsh-completion
+	url = https://github.com/felixr/docker-zsh-completion.git

@@ -13,6 +13,7 @@ bindkey '^[[B' down-line-or-history
 zstyle ':completion:*' menu select
 zstyle ':completion:*' verbose yes
 zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
+zstyle ':completion:*' special-dirs true
 zstyle ':completion:*' group-name ''
 
 EDITOR=vim
