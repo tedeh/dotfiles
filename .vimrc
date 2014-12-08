@@ -29,6 +29,7 @@ Bundle 'nono/vim-handlebars'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'wavded/vim-stylus'
 Bundle 'chase/vim-ansible-yaml'
+Bundle 'fatih/vim-go'
 
 filetype plugin indent on
 
@@ -76,6 +77,13 @@ set tags=./tags,/
 let g:airline_powerline_fonts = 1
 let c_no_comment_fold = 1
 
+" fatih/vim-go settings
+let g:go_highlight_trailing_whitespace_error = ''
+let g:go_fmt_autosave = 0
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+
 " Autocmds for specific files
 autocmd BufRead,BufNewFile Capfile set filetype=ruby
 autocmd BufRead,BufNewFile Vagrantfile set filetype=ruby
@@ -83,6 +91,7 @@ autocmd BufRead,BufNewFile Dockerfile set filetype=conf
 autocmd BufRead,BufNewFile *.scss set filetype=scss
 autocmd BufRead,BufNewFile *.plist set filetype=xml
 autocmd BufRead,BufNewFile * set foldmethod=manual
+autocmd BufRead,BufNewFile *.go set filetype=go
 "autocmd BufRead,BufNewFile *.js set foldmethod=syntax
 "autocmd BufWritePost,BufLeave,WinLeave *.* mkview!
 "autocmd BufWinEnter *.* silent loadview
