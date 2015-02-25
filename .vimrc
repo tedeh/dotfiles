@@ -55,6 +55,7 @@ set term=xterm-256color
 set expandtab
 set tabstop=2
 set softtabstop=2
+set tabpagemax=40
 set shiftwidth=2
 set smartindent
 set autoindent
