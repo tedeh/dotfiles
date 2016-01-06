@@ -30,8 +30,10 @@ Bundle 'tomtom/tcomment_vim'
 Bundle 'wavded/vim-stylus'
 Bundle 'chase/vim-ansible-yaml'
 Bundle 'fatih/vim-go'
+Bundle 'leafgarland/typescript-vim'
 
-filetype plugin indent on
+filetype plugin on
+filetype indent on
 
 " Syntax highlighting
 syntax enable
@@ -52,12 +54,11 @@ map <C-l> <C-W>l
 
 set nocompatible
 set term=xterm-256color
-set expandtab
-set tabstop=2
 set softtabstop=2
 set tabpagemax=40
+set tabstop=2
 set shiftwidth=2
-set smartindent
+set expandtab
 set autoindent
 set number
 set incsearch
@@ -93,6 +94,7 @@ autocmd BufRead,BufNewFile *.scss set filetype=scss
 autocmd BufRead,BufNewFile *.plist set filetype=xml
 autocmd BufRead,BufNewFile * set foldmethod=manual
 autocmd BufRead,BufNewFile *.go set filetype=go
+autocmd BufRead,BufNewFile *.jack set filetype=c
 "autocmd BufRead,BufNewFile *.js set foldmethod=syntax
 "autocmd BufWritePost,BufLeave,WinLeave *.* mkview!
 "autocmd BufWinEnter *.* silent loadview
@@ -107,5 +109,6 @@ if ! has('gui_running')
     augroup END
 endif
 
-" Use tabs for indentation when editing Makefiles
+" Use tabs for indentation when editing Makefiles and Gofiles
 autocmd FileType make setlocal noexpandtab
+autocmd FileType go setlocal noexpandtab
