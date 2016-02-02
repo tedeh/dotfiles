@@ -1,8 +1,9 @@
 autoload -U colors && colors
 autoload -U promptinit && promptinit
 autoload -U compinit && compinit
+autoload -Uz vcs_info
 
-setopt completealiases appendhistory autocd extendedglob nomatch notify list_ambiguous
+setopt completealiases appendhistory autocd extendedglob nomatch notify list_ambiguous prompt_subst
 unsetopt beep
 
 bindkey -v
@@ -15,10 +16,16 @@ zstyle ':completion:*' verbose yes
 zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
 zstyle ':completion:*' special-dirs true
 zstyle ':completion:*' group-name ''
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:git*' formats "%{$fg[grey]%}%s [%{$fg[blue]%}%b]%{$reset_color%}%m%u%c%{$reset_color%} "
+
+precmd() {
+  vcs_info
+}
 
 EDITOR=vim
 PROMPT="%{$fg[green]%}%n@%M%{$reset_color%} %{$fg[blue]%}%~%{$reset_color%} %{$fg[yellow]%}✯%{$reset_color%} "
-RPROMPT="[%{$fg[yellow]%}%?%{$reset_color%}]"
+RPROMPT='${vcs_info_msg_0_}[%{$fg[yellow]%}%?%{$reset_color%}]'
 
 HISTFILE=~/.histfile
 HISTSIZE=1000
