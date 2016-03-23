@@ -31,6 +31,7 @@ Bundle 'wavded/vim-stylus'
 Bundle 'chase/vim-ansible-yaml'
 Bundle 'fatih/vim-go'
 Bundle 'leafgarland/typescript-vim'
+Bundle 'rking/ag.vim'
 
 filetype plugin on
 filetype indent on
