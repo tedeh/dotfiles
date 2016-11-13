@@ -81,16 +81,19 @@ let g:airline_powerline_fonts = 1
 let c_no_comment_fold = 1
 
 " fatih/vim-go settings
-let g:go_highlight_trailing_whitespace_error = ''
+let g:go_highlight_trailing_whitespace_error = 0
+let g:go_highlight_array_whitespace_error = 0
+let g:go_highlight_chan_whitespace_error = 0
 let g:go_fmt_autosave = 0
-let g:go_highlight_functions = 1
+let g:go_highlight_functions = 0
 let g:go_highlight_methods = 1
-let g:go_highlight_structs = 1
+let g:go_highlight_structs = 0
 
 " Autocmds for specific files
 autocmd BufRead,BufNewFile Capfile set filetype=ruby
 autocmd BufRead,BufNewFile Vagrantfile set filetype=ruby
 autocmd BufRead,BufNewFile Dockerfile set filetype=conf
+autocmd BufRead,BufNewFile .babelrc set filetype=json
 autocmd BufRead,BufNewFile *.scss set filetype=scss
 autocmd BufRead,BufNewFile *.plist set filetype=xml
 autocmd BufRead,BufNewFile * set foldmethod=manual

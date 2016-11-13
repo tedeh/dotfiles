@@ -36,6 +36,7 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias lsof='lsof -P'
+alias tree='tree -C'
 
 if [[ -r ~/.zshrc.local ]]; then
   source ~/.zshrc.local
