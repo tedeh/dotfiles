@@ -32,6 +32,7 @@ Bundle 'chase/vim-ansible-yaml'
 Bundle 'fatih/vim-go'
 Bundle 'leafgarland/typescript-vim'
 Bundle 'rking/ag.vim'
+Bundle 'lepture/vim-jinja'
 
 filetype plugin on
 filetype indent on
@@ -78,16 +79,23 @@ set tags=./tags,/
 " set relativenumber Will be back to this when it WORKS
 
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#whitespace#enabled = 0
 let c_no_comment_fold = 1
 
 " fatih/vim-go settings
 let g:go_highlight_trailing_whitespace_error = 0
 let g:go_highlight_array_whitespace_error = 0
 let g:go_highlight_chan_whitespace_error = 0
-let g:go_fmt_autosave = 0
+let g:go_fmt_command = "goimports"
+let g:go_fmt_autosave = 1
 let g:go_highlight_functions = 0
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 0
+au FileType go nmap <Leader>ds <Plug>(go-def-split)
+au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+au FileType go nmap <Leader>dt <Plug>(go-def-tab)
+au FileType go nmap <Leader>gd <Plug>(go-doc)
+au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
 
 " Autocmds for specific files
 autocmd BufRead,BufNewFile Capfile set filetype=ruby
