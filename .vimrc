@@ -15,6 +15,7 @@ Bundle 'vim-scripts/FuzzyFinder'
 Bundle 'vim-scripts/L9'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'StanAngeloff/php.vim'
+" Bundle 'shawncplus/phpcomplete.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'othree/xml.vim'
 Bundle 'Townk/vim-autoclose'
@@ -33,6 +34,7 @@ Bundle 'fatih/vim-go'
 Bundle 'leafgarland/typescript-vim'
 Bundle 'rking/ag.vim'
 Bundle 'lepture/vim-jinja'
+Bundle 'mxw/vim-jsx'
 
 filetype plugin on
 filetype indent on
@@ -62,6 +64,7 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set autoindent
+set cursorcolumn
 set number
 set incsearch
 set hlsearch
@@ -91,6 +94,7 @@ let g:go_fmt_autosave = 1
 let g:go_highlight_functions = 0
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 0
+let g:jsx_ext_required = 0
 au FileType go nmap <Leader>ds <Plug>(go-def-split)
 au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
 au FileType go nmap <Leader>dt <Plug>(go-def-tab)
