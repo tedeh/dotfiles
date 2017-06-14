@@ -22,8 +22,9 @@ Bundle 'Townk/vim-autoclose'
 Bundle 'leshill/vim-json'
 Bundle 'myusuf3/numbers.vim'
 Bundle 'tobyS/vip'
+" Bundle 'mattn/emmet-vim'
 Bundle 'vim-scripts/svg.vim'
-Bundle 'gregsexton/MatchTag'
+Bundle 'valloric/MatchTagAlways'
 Bundle 'othree/html5.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'nono/vim-handlebars'
@@ -45,7 +46,7 @@ syntax enable
 " Bindings for the F-buttons
 map <F1> :FufRenewCache<CR>
 map <F2> :set invpaste paste?<CR>
-map <F3> :FufFile<CR>
+map <F3> :FufRenewCache<CR>:FufFile<CR>
 map <F4> :FufBufferTag<CR>
 map <F5> :tabp<CR>
 map <F6> :tabn<CR>
@@ -64,7 +65,6 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set autoindent
-set cursorcolumn
 set number
 set incsearch
 set hlsearch
@@ -95,6 +95,8 @@ let g:go_highlight_functions = 0
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 0
 let g:jsx_ext_required = 0
+" let g:user_emmet_install_global = 0
+" au FileType html,css EmmetInstall
 au FileType go nmap <Leader>ds <Plug>(go-def-split)
 au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
 au FileType go nmap <Leader>dt <Plug>(go-def-tab)
@@ -129,3 +131,4 @@ endif
 " Use tabs for indentation when editing Makefiles and Gofiles
 autocmd FileType make setlocal noexpandtab
 autocmd FileType go setlocal noexpandtab
+autocmd FileType html setlocal cursorcolumn
