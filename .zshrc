@@ -3,7 +3,15 @@ autoload -U promptinit && promptinit
 autoload -U compinit && compinit
 autoload -Uz vcs_info
 
-setopt completealiases appendhistory autocd extendedglob nomatch notify list_ambiguous prompt_subst
+setopt completealiases 
+setopt appendhistory 
+setopt autocd 
+setopt extendedglob 
+setopt nomatch 
+setopt notify 
+setopt list_ambiguous 
+setopt prompt_subst 
+setopt menu_complete
 unsetopt beep
 
 bindkey -v
