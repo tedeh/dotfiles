@@ -2,6 +2,7 @@
 filetype off
 
 set rtp+=~/.vim/bundle/vundle/
+set rtp+=/usr/local/opt/fzf
 call vundle#rc()
 
 " Vundle bundle
@@ -36,6 +37,7 @@ Bundle 'leafgarland/typescript-vim'
 Bundle 'rking/ag.vim'
 Bundle 'lepture/vim-jinja'
 Bundle 'mxw/vim-jsx'
+Bundle 'junegunn/fzf.vim'
 
 filetype plugin on
 filetype indent on
@@ -43,19 +45,24 @@ filetype indent on
 " Syntax highlighting
 syntax enable
 
-" Bindings for the F-buttons
-map <F1> :FufRenewCache<CR>
-map <F2> :set invpaste paste?<CR>
-map <F3> :FufRenewCache<CR>:FufFile<CR>
-map <F4> :FufBufferTag<CR>
-map <F5> :tabp<CR>
-map <F6> :tabn<CR>
+" fzf
+map <C-f> :Files<CR>
+
+" paste mode
+map <C-p> :set invpaste paste?<CR>
+
+" fuzzyfinder
+map <C-g> :FufRenewCache<CR>:FufFile<CR>
 
 " Switch pane with Ctrl + h/j/k/l
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
+
+" Switch tab with Ctrl + left/right
+map <C-Left> :tabp<CR>
+map <C-Right> :tabn<CR>
 
 set nocompatible
 set term=xterm-256color
@@ -84,6 +91,7 @@ set tags=./tags,/
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#whitespace#enabled = 0
 let c_no_comment_fold = 1
+let g:javascript_plugin_jsdoc = 1
 
 " fatih/vim-go settings
 let g:go_highlight_trailing_whitespace_error = 0
@@ -95,6 +103,7 @@ let g:go_highlight_functions = 0
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 0
 let g:jsx_ext_required = 0
+let g:fzf_layout = { 'up': '~40%' }
 " let g:user_emmet_install_global = 0
 " au FileType html,css EmmetInstall
 au FileType go nmap <Leader>ds <Plug>(go-def-split)
