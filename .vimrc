@@ -2,7 +2,7 @@
 filetype off
 
 set rtp+=~/.vim/bundle/vundle/
-set rtp+=/usr/local/opt/fzf
+" set rtp+=/usr/local/opt/fzf
 call vundle#rc()
 
 " Vundle bundle
@@ -16,11 +16,12 @@ Bundle 'vim-scripts/FuzzyFinder'
 Bundle 'vim-scripts/L9'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'StanAngeloff/php.vim'
+Bundle '2072/PHP-Indenting-for-VIm'
 " Bundle 'shawncplus/phpcomplete.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'othree/xml.vim'
 Bundle 'Townk/vim-autoclose'
-Bundle 'leshill/vim-json'
+Bundle 'elzr/vim-json'
 Bundle 'myusuf3/numbers.vim'
 Bundle 'tobyS/vip'
 " Bundle 'mattn/emmet-vim'
@@ -37,7 +38,7 @@ Bundle 'leafgarland/typescript-vim'
 Bundle 'rking/ag.vim'
 Bundle 'lepture/vim-jinja'
 Bundle 'mxw/vim-jsx'
-Bundle 'junegunn/fzf.vim'
+" Bundle 'junegunn/fzf.vim'
 
 filetype plugin on
 filetype indent on
@@ -46,7 +47,7 @@ filetype indent on
 syntax enable
 
 " fzf
-map <C-f> :Files<CR>
+" map <C-f> :Files<CR>
 
 " paste mode
 map <C-p> :set invpaste paste?<CR>
@@ -86,7 +87,7 @@ set backspace=2
 set t_Co=256
 set laststatus=2
 set tags=./tags,/
-" set relativenumber Will be back to this when it WORKS
+set relativenumber " 2017-08-14 ??? -> Will be back to this when it WORKS
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#whitespace#enabled = 0
@@ -103,7 +104,7 @@ let g:go_highlight_functions = 0
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 0
 let g:jsx_ext_required = 0
-let g:fzf_layout = { 'up': '~40%' }
+" let g:fzf_layout = { 'up': '~40%' }
 " let g:user_emmet_install_global = 0
 " au FileType html,css EmmetInstall
 au FileType go nmap <Leader>ds <Plug>(go-def-split)
@@ -140,4 +141,4 @@ endif
 " Use tabs for indentation when editing Makefiles and Gofiles
 autocmd FileType make setlocal noexpandtab
 autocmd FileType go setlocal noexpandtab
-autocmd FileType html setlocal cursorcolumn
+" autocmd FileType html setlocal cursorcolumn

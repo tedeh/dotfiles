@@ -31,13 +31,14 @@ precmd() {
   vcs_info
 }
 
-EDITOR=vim
-PROMPT="%{$fg[green]%}%n@%M%{$reset_color%} %{$fg[blue]%}%~%{$reset_color%} %{$fg[yellow]%}✯%{$reset_color%} "
-RPROMPT='${vcs_info_msg_0_}[%{$fg[yellow]%}%?%{$reset_color%}]'
+export EDITOR=vim
+export GIT_EDITOR=vim
+export PROMPT="%{$fg[green]%}%n@%M%{$reset_color%} %{$fg[blue]%}%~%{$reset_color%} %{$fg[yellow]%}✯%{$reset_color%} "
+export RPROMPT='${vcs_info_msg_0_}[%{$fg[yellow]%}%?%{$reset_color%}]'
 
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+export HISTFILE=~/.histfile
+export HISTSIZE=1000
+export SAVEHIST=1000
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
