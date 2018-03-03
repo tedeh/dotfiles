@@ -1,3 +1,4 @@
 .vim/.netrwhist
-.*
-!.gitignore
+.vim/bundle/*
+*.swp
+.vagrant

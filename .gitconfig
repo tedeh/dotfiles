@@ -5,7 +5,7 @@
 	email = mail@tedeh.net
 [core]
 	editor = vim
-	excludesfile = /home/tedeh/.gitignore
+	excludesfile = ~/.gitignore
   filemode = false
 	ignore = dirty
 [push]

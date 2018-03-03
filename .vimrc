@@ -98,6 +98,7 @@ let g:javascript_plugin_jsdoc = 1
 let g:go_highlight_trailing_whitespace_error = 0
 let g:go_highlight_array_whitespace_error = 0
 let g:go_highlight_chan_whitespace_error = 0
+let g:go_version_warning = 0
 let g:go_fmt_command = "goimports"
 let g:go_fmt_autosave = 1
 let g:go_highlight_functions = 0
@@ -127,6 +128,18 @@ autocmd BufRead,BufNewFile *.jack set filetype=c
 "autocmd BufRead,BufNewFile *.js set foldmethod=syntax
 "autocmd BufWritePost,BufLeave,WinLeave *.* mkview!
 "autocmd BufWinEnter *.* silent loadview
+
+" for hex editing of .bin files
+augroup Binary
+  au!
+  au BufReadPre  *.bin let &bin=1
+  au BufReadPost *.bin if &bin | %!xxd
+  au BufReadPost *.bin set ft=xxd | endif
+  au BufWritePre *.bin if &bin | %!xxd -r
+  au BufWritePre *.bin endif
+  au BufWritePost *.bin if &bin | %!xxd
+  au BufWritePost *.bin set nomod | endif
+augroup END
 
 " Prevent delay when exiting insert mode
 if ! has('gui_running')
