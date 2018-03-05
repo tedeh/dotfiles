@@ -94,6 +94,9 @@ let g:airline#extensions#whitespace#enabled = 0
 let c_no_comment_fold = 1
 let g:javascript_plugin_jsdoc = 1
 
+" disable quote concealing for elzr/vim-json
+let g:vim_json_syntax_conceal = 0
+
 " fatih/vim-go settings
 let g:go_highlight_trailing_whitespace_error = 0
 let g:go_highlight_array_whitespace_error = 0
