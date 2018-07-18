@@ -2,5 +2,7 @@
 .vim/bundle/*
 *.swp
 *.swo
+*.swn
 .vagrant
 .DS_Store
+.com*
