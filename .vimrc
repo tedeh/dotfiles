@@ -1,44 +1,91 @@
 " Vundle setup
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-" set rtp+=/usr/local/opt/fzf
-call vundle#rc()
+set rtp+=/usr/local/opt/fzf
+
+call plug#begin('~/.vim/plugged')
+Plug 'gmarik/vundle'
+Plug 'bling/vim-airline'
+Plug 'tpope/vim-markdown'
+Plug 'tpope/vim-surround'
+Plug 'digitaltoad/vim-jade'
+Plug 'cakebaker/scss-syntax.vim', {'for': ['sass']}
+Plug 'vim-scripts/FuzzyFinder'
+Plug 'vim-scripts/L9'
+"Plug 'vim-scripts/taglist.vim'
+"Plug 'StanAngeloff/php.vim'
+"Plug '2072/PHP-Indenting-for-VIm'
+" Plug 'shawncplus/phpcomplete.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'othree/xml.vim', {'for': ['xml']}
+Plug 'Townk/vim-autoclose'
+Plug 'elzr/vim-json', {'for': ['json']}
+Plug 'myusuf3/numbers.vim'
+Plug 'tobyS/vip'
+" Plug 'mattn/emmet-vim'
+Plug 'vim-scripts/svg.vim', {'for': ['svg']}
+Plug 'valloric/MatchTagAlways'
+Plug 'othree/html5.vim'
+"Plug 'kchmck/vim-coffee-script'
+Plug 'nono/vim-handlebars'
+Plug 'tomtom/tcomment_vim'
+Plug 'iloginow/vim-stylus', {'for': ['stylus']}
+Plug 'chase/vim-ansible-yaml'
+Plug 'fatih/vim-go', {'for': ['go']}
+Plug 'leafgarland/typescript-vim'
+"Plug 'rking/ag.vim'
+Plug 'lepture/vim-jinja'
+Plug 'mxw/vim-jsx', {'for': ['javascript.jsx']}
+Plug 'junegunn/fzf.vim'
+" Plug 'prabirshrestha/async.vim'
+" Plug 'prabirshrestha/vim-lsp'
+Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
+
+Plug 'Shougo/deoplete.nvim'
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
+
+call plug#end()
+
+"set rtp+=~/.vim/bundle/vundle/
+"call vundle#rc()
 
 " Vundle bundle
-Bundle 'gmarik/vundle'
-Bundle 'bling/vim-airline'
-Bundle 'tpope/vim-markdown'
-Bundle 'tpope/vim-surround'
-Bundle 'digitaltoad/vim-jade'
-Bundle 'cakebaker/scss-syntax.vim'
-Bundle 'vim-scripts/FuzzyFinder'
-Bundle 'vim-scripts/L9'
-Bundle 'vim-scripts/taglist.vim'
-Bundle 'StanAngeloff/php.vim'
-Bundle '2072/PHP-Indenting-for-VIm'
-" Bundle 'shawncplus/phpcomplete.vim'
-Bundle 'pangloss/vim-javascript'
-Bundle 'othree/xml.vim'
-Bundle 'Townk/vim-autoclose'
-Bundle 'elzr/vim-json'
-Bundle 'myusuf3/numbers.vim'
-Bundle 'tobyS/vip'
-" Bundle 'mattn/emmet-vim'
-Bundle 'vim-scripts/svg.vim'
-Bundle 'valloric/MatchTagAlways'
-Bundle 'othree/html5.vim'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'nono/vim-handlebars'
-Bundle 'tomtom/tcomment_vim'
-Bundle 'iloginow/vim-stylus'
-Bundle 'chase/vim-ansible-yaml'
-Bundle 'fatih/vim-go'
-Bundle 'leafgarland/typescript-vim'
-Bundle 'rking/ag.vim'
-Bundle 'lepture/vim-jinja'
-Bundle 'mxw/vim-jsx'
+" Bundle 'gmarik/vundle'
+" Bundle 'bling/vim-airline'
+" Bundle 'tpope/vim-markdown'
+" Bundle 'tpope/vim-surround'
+" Bundle 'digitaltoad/vim-jade'
+" Bundle 'cakebaker/scss-syntax.vim'
+" Bundle 'vim-scripts/FuzzyFinder'
+" Bundle 'vim-scripts/L9'
+" "Bundle 'vim-scripts/taglist.vim'
+" "Bundle 'StanAngeloff/php.vim'
+" "Bundle '2072/PHP-Indenting-for-VIm'
+" " Bundle 'shawncplus/phpcomplete.vim'
+" Bundle 'pangloss/vim-javascript'
+" Bundle 'othree/xml.vim'
+" Bundle 'Townk/vim-autoclose'
+" Bundle 'elzr/vim-json'
+" Bundle 'myusuf3/numbers.vim'
+" Bundle 'tobyS/vip'
+" " Bundle 'mattn/emmet-vim'
+" Bundle 'vim-scripts/svg.vim'
+" Bundle 'valloric/MatchTagAlways'
+" Bundle 'othree/html5.vim'
+" "Bundle 'kchmck/vim-coffee-script'
+" Bundle 'nono/vim-handlebars'
+" Bundle 'tomtom/tcomment_vim'
+" Bundle 'iloginow/vim-stylus'
+" Bundle 'chase/vim-ansible-yaml'
+" Bundle 'fatih/vim-go'
+" Bundle 'leafgarland/typescript-vim'
+" "Bundle 'rking/ag.vim'
+" Bundle 'lepture/vim-jinja'
+" Bundle 'mxw/vim-jsx'
 " Bundle 'junegunn/fzf.vim'
+" Bundle 'prabirshrestha/async.vim'
+" Bundle 'prabirshrestha/vim-lsp'
 
 filetype plugin on
 filetype indent on
@@ -64,6 +111,8 @@ map <C-l> <C-W>l
 " Switch tab with Ctrl + left/right
 map <C-Left> :tabp<CR>
 map <C-Right> :tabn<CR>
+
+nnoremap <F5> :call LanguageClient_contextMenu()<CR>
 
 set nocompatible
 set term=xterm-256color
@@ -97,6 +146,12 @@ let g:javascript_plugin_jsdoc = 1
 " disable quote concealing for elzr/vim-json
 let g:vim_json_syntax_conceal = 0
 
+let g:deoplete#enable_at_startup = 1
+
+let g:LanguageClient_serverCommands = {
+    \ 'javascript': ['/Users/tedeh/.config/yarn/global/node_modules/.bin/javascript-typescript-stdio'],
+    \ }
+
 " fatih/vim-go settings
 let g:go_highlight_trailing_whitespace_error = 0
 let g:go_highlight_array_whitespace_error = 0
@@ -107,7 +162,7 @@ let g:go_fmt_autosave = 1
 let g:go_highlight_functions = 0
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 0
-let g:jsx_ext_required = 0
+let g:jsx_ext_required = 1
 " let g:fzf_layout = { 'up': '~40%' }
 " let g:user_emmet_install_global = 0
 " au FileType html,css EmmetInstall
