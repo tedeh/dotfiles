@@ -1,59 +1,55 @@
-" Vundle setup
-filetype off
+" execute python3, see https://github.com/Valloric/MatchTagAlways/issues/44
+if has('python3')
+  silent! python3 1
+endif
 
-set rtp+=~/.vim/bundle/vundle/
-" set rtp+=/usr/local/opt/fzf
-call vundle#rc()
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-" Vundle bundle
-Bundle 'gmarik/vundle'
-Bundle 'bling/vim-airline'
-Bundle 'tpope/vim-markdown'
-Bundle 'tpope/vim-surround'
-Bundle 'digitaltoad/vim-jade'
-Bundle 'cakebaker/scss-syntax.vim'
-Bundle 'vim-scripts/FuzzyFinder'
-Bundle 'vim-scripts/L9'
-Bundle 'vim-scripts/taglist.vim'
-Bundle 'StanAngeloff/php.vim'
-Bundle '2072/PHP-Indenting-for-VIm'
-" Bundle 'shawncplus/phpcomplete.vim'
-Bundle 'pangloss/vim-javascript'
-Bundle 'othree/xml.vim'
-Bundle 'Townk/vim-autoclose'
-Bundle 'elzr/vim-json'
-Bundle 'myusuf3/numbers.vim'
-Bundle 'tobyS/vip'
-" Bundle 'mattn/emmet-vim'
-Bundle 'vim-scripts/svg.vim'
-Bundle 'valloric/MatchTagAlways'
-Bundle 'othree/html5.vim'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'nono/vim-handlebars'
-Bundle 'tomtom/tcomment_vim'
-Bundle 'iloginow/vim-stylus'
-Bundle 'chase/vim-ansible-yaml'
-Bundle 'fatih/vim-go'
-Bundle 'leafgarland/typescript-vim'
-Bundle 'rking/ag.vim'
-Bundle 'lepture/vim-jinja'
-Bundle 'mxw/vim-jsx'
-" Bundle 'junegunn/fzf.vim'
-
-filetype plugin on
-filetype indent on
-
-" Syntax highlighting
-syntax enable
+" Plug plugins
+call plug#begin('~/.vim/plugged')
+Plug 'gmarik/vundle'
+Plug 'bling/vim-airline'
+Plug 'tpope/vim-markdown'
+Plug 'tpope/vim-surround'
+Plug 'digitaltoad/vim-jade'
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'vim-scripts/L9'
+Plug 'vim-scripts/taglist.vim'
+" Plug 'StanAngeloff/php.vim'
+" Plug '2072/PHP-Indenting-for-VIm'
+" Plug 'shawncplus/phpcomplete.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'othree/xml.vim'
+Plug 'Townk/vim-autoclose'
+Plug 'elzr/vim-json'
+Plug 'myusuf3/numbers.vim'
+Plug 'tobyS/vip'
+" Plug 'mattn/emmet-vim'
+Plug 'vim-scripts/svg.vim'
+Plug 'valloric/MatchTagAlways'
+Plug 'othree/html5.vim'
+Plug 'kchmck/vim-coffee-script'
+Plug 'nono/vim-handlebars'
+Plug 'tomtom/tcomment_vim'
+Plug 'iloginow/vim-stylus'
+Plug 'chase/vim-ansible-yaml'
+Plug 'fatih/vim-go'
+Plug 'leafgarland/typescript-vim'
+Plug 'rking/ag.vim'
+Plug 'lepture/vim-jinja'
+Plug 'mxw/vim-jsx'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+call plug#end()
 
 " fzf
-" map <C-f> :Files<CR>
+map <C-g> :FZF<CR>
 
 " paste mode
 map <C-p> :set invpaste paste?<CR>
-
-" fuzzyfinder
-map <C-g> :FufRenewCache<CR>:FufFile<CR>
 
 " Switch pane with Ctrl + h/j/k/l
 map <C-j> <C-W>j
@@ -108,7 +104,7 @@ let g:go_highlight_functions = 0
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 0
 let g:jsx_ext_required = 0
-" let g:fzf_layout = { 'up': '~40%' }
+let g:fzf_layout = { 'up': '~40%' }
 " let g:user_emmet_install_global = 0
 " au FileType html,css EmmetInstall
 au FileType go nmap <Leader>ds <Plug>(go-def-split)
@@ -135,7 +131,7 @@ autocmd BufRead,BufNewFile *.jack set filetype=c
 " for hex editing of .bin files
 augroup Binary
   au!
-  au BufReadPre  *.bin let &bin=1
+  au BufReadPre *.bin let &bin=1
   au BufReadPost *.bin if &bin | %!xxd
   au BufReadPost *.bin set ft=xxd | endif
   au BufWritePre *.bin if &bin | %!xxd -r
@@ -145,13 +141,13 @@ augroup Binary
 augroup END
 
 " Prevent delay when exiting insert mode
-if ! has('gui_running')
-    set ttimeoutlen=10
-    augroup FastEscape
-        autocmd!
-        au InsertEnter * set timeoutlen=0
-        au InsertLeave * set timeoutlen=1000
-    augroup END
+if !has('gui_running')
+  set ttimeoutlen=10
+  augroup FastEscape
+    autocmd!
+    au InsertEnter * set timeoutlen=0
+    au InsertLeave * set timeoutlen=1000
+  augroup END
 endif
 
 " Use tabs for indentation when editing Makefiles and Gofiles

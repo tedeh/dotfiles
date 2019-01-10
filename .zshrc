@@ -54,3 +54,5 @@ fi
 # Make all entries in $path unique
 typeset -aU path
 path=($path)
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
