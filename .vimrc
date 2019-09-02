@@ -17,6 +17,7 @@ Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-surround'
 Plug 'digitaltoad/vim-jade'
 Plug 'cakebaker/scss-syntax.vim'
+Plug 'hail2u/vim-css3-syntax'
 Plug 'vim-scripts/L9'
 Plug 'vim-scripts/taglist.vim'
 " Plug 'StanAngeloff/php.vim'
@@ -26,7 +27,6 @@ Plug 'pangloss/vim-javascript'
 Plug 'othree/xml.vim'
 Plug 'Townk/vim-autoclose'
 Plug 'elzr/vim-json'
-Plug 'myusuf3/numbers.vim'
 Plug 'tobyS/vip'
 " Plug 'mattn/emmet-vim'
 Plug 'vim-scripts/svg.vim'
@@ -39,10 +39,21 @@ Plug 'iloginow/vim-stylus'
 Plug 'chase/vim-ansible-yaml'
 Plug 'fatih/vim-go'
 Plug 'leafgarland/typescript-vim'
+Plug 'HerringtonDarkholme/yats.vim'
 Plug 'rking/ag.vim'
 Plug 'lepture/vim-jinja'
-Plug 'mxw/vim-jsx'
+Plug 'amadeus/vim-jsx'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+
 call plug#end()
 
 " fzf
@@ -70,6 +81,7 @@ set shiftwidth=2
 set expandtab
 set autoindent
 set number
+set relativenumber
 set incsearch
 set hlsearch
 set ignorecase
@@ -83,12 +95,15 @@ set backspace=2
 set t_Co=256
 set laststatus=2
 set tags=./tags,/
-set relativenumber " 2017-08-14 ??? -> Will be back to this when it WORKS
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#whitespace#enabled = 0
 let c_no_comment_fold = 1
 let g:javascript_plugin_jsdoc = 1
+
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#disable_auto_complete = 1
+inoremap <expr> <C-n>  deoplete#manual_complete()
 
 " disable quote concealing for elzr/vim-json
 let g:vim_json_syntax_conceal = 0
