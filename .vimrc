@@ -15,7 +15,7 @@ Plug 'gmarik/vundle'
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-surround'
-Plug 'digitaltoad/vim-jade'
+Plug 'digitaltoad/vim-pug'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'vim-scripts/L9'
@@ -24,6 +24,7 @@ Plug 'vim-scripts/taglist.vim'
 " Plug '2072/PHP-Indenting-for-VIm'
 " Plug 'shawncplus/phpcomplete.vim'
 Plug 'pangloss/vim-javascript'
+Plug 'maxmellon/vim-jsx-pretty'
 Plug 'othree/xml.vim'
 Plug 'Townk/vim-autoclose'
 Plug 'elzr/vim-json'
@@ -31,8 +32,7 @@ Plug 'tobyS/vip'
 " Plug 'mattn/emmet-vim'
 Plug 'vim-scripts/svg.vim'
 Plug 'valloric/MatchTagAlways'
-Plug 'othree/html5.vim'
-Plug 'kchmck/vim-coffee-script'
+"Plug 'kchmck/vim-coffee-script'
 Plug 'nono/vim-handlebars'
 Plug 'tomtom/tcomment_vim'
 Plug 'iloginow/vim-stylus'
@@ -42,16 +42,16 @@ Plug 'leafgarland/typescript-vim'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'rking/ag.vim'
 Plug 'lepture/vim-jinja'
-Plug 'amadeus/vim-jsx'
+Plug 'othree/html5.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
   Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
+  " Plug 'Shougo/deoplete.nvim'
+  " Plug 'roxma/nvim-yarp'
+  " Plug 'roxma/vim-hug-neovim-rpc'
 endif
 
 call plug#end()
@@ -72,6 +72,7 @@ map <C-l> <C-W>l
 map <C-Left> :tabp<CR>
 map <C-Right> :tabn<CR>
 
+set encoding=utf-8
 set nocompatible
 set term=xterm-256color
 set softtabstop=2
@@ -118,7 +119,7 @@ let g:go_fmt_autosave = 1
 let g:go_highlight_functions = 0
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 0
-let g:jsx_ext_required = 0
+" let g:jsx_ext_required = 0 " old plugin vim-jsx
 let g:fzf_layout = { 'up': '~40%' }
 " let g:user_emmet_install_global = 0
 " au FileType html,css EmmetInstall
@@ -139,6 +140,7 @@ autocmd BufRead,BufNewFile * set foldmethod=manual
 autocmd BufRead,BufNewFile *.go set filetype=go
 autocmd BufRead,BufNewFile *.go setlocal shiftwidth=4 tabstop=4 noexpandtab
 autocmd BufRead,BufNewFile *.jack set filetype=c
+autocmd BufRead,BufNewFile *.md setlocal textwidth=80
 "autocmd BufRead,BufNewFile *.js set foldmethod=syntax
 "autocmd BufWritePost,BufLeave,WinLeave *.* mkview!
 "autocmd BufWinEnter *.* silent loadview
