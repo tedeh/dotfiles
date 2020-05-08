@@ -96,6 +96,7 @@ set backspace=2
 set t_Co=256
 set laststatus=2
 set tags=./tags,/
+set tabpagemax=100
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#whitespace#enabled = 0
