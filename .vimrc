@@ -20,9 +20,6 @@ Plug 'cakebaker/scss-syntax.vim'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'vim-scripts/L9'
 Plug 'vim-scripts/taglist.vim'
-" Plug 'StanAngeloff/php.vim'
-" Plug '2072/PHP-Indenting-for-VIm'
-" Plug 'shawncplus/phpcomplete.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'othree/xml.vim'
@@ -44,6 +41,9 @@ Plug 'rking/ag.vim'
 Plug 'lepture/vim-jinja'
 Plug 'othree/html5.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+" normally php plugins are commented
+Plug 'StanAngeloff/php.vim'
+" Plug 'shawncplus/phpcomplete.vim'
 
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -145,6 +145,11 @@ autocmd BufRead,BufNewFile *.md setlocal textwidth=80
 "autocmd BufRead,BufNewFile *.js set foldmethod=syntax
 "autocmd BufWritePost,BufLeave,WinLeave *.* mkview!
 "autocmd BufWinEnter *.* silent loadview
+
+" php extension 
+let g:php_html_load = 1
+let g:php_html_in_heredoc = 0
+let g:php_html_in_nowdoc = 0
 
 " for hex editing of .bin files
 augroup Binary
