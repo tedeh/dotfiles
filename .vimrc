@@ -23,8 +23,8 @@ Plug 'vim-scripts/taglist.vim'
 " Plug 'StanAngeloff/php.vim'
 " Plug '2072/PHP-Indenting-for-VIm'
 " Plug 'shawncplus/phpcomplete.vim'
-Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
+Plug 'pangloss/vim-javascript'
 Plug 'othree/xml.vim'
 Plug 'Townk/vim-autoclose'
 Plug 'elzr/vim-json'
@@ -141,7 +141,7 @@ autocmd BufRead,BufNewFile * set foldmethod=manual
 autocmd BufRead,BufNewFile *.go set filetype=go
 autocmd BufRead,BufNewFile *.go setlocal shiftwidth=4 tabstop=4 noexpandtab
 autocmd BufRead,BufNewFile *.jack set filetype=c
-autocmd BufRead,BufNewFile *.md setlocal textwidth=80
+" autocmd BufRead,BufNewFile *.md setlocal textwidth=80
 "autocmd BufRead,BufNewFile *.js set foldmethod=syntax
 "autocmd BufWritePost,BufLeave,WinLeave *.* mkview!
 "autocmd BufWinEnter *.* silent loadview

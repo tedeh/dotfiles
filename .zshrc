@@ -47,6 +47,23 @@ alias egrep='egrep --color=auto'
 alias lsof='lsof -P'
 alias tree='tree -C'
 
+# alias opens vim tabs with all ack search results, automatically searching in vim
+# $1 = ack search string
+# $2 = (optional) directory, defaults to cwd
+vick () {
+  if [ "$2" != "" ]
+  then
+    vim -c "/$1" -p `ack -l $1 $2`
+  else
+    vim -c "/$1" -p `ack -l $1 .`
+  fi
+}
+
+# alias commits everything in v
+gitca () {
+  git commit -am $1
+}
+
 if [[ -r ~/.zshrc.local ]]; then
   source ~/.zshrc.local
 fi
