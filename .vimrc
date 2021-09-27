@@ -32,17 +32,16 @@ Plug 'tobyS/vip'
 " Plug 'mattn/emmet-vim'
 Plug 'vim-scripts/svg.vim'
 Plug 'valloric/MatchTagAlways'
-"Plug 'kchmck/vim-coffee-script'
 Plug 'nono/vim-handlebars'
 Plug 'tomtom/tcomment_vim'
 Plug 'iloginow/vim-stylus'
-Plug 'chase/vim-ansible-yaml'
 Plug 'fatih/vim-go'
 Plug 'leafgarland/typescript-vim'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'rking/ag.vim'
 Plug 'lepture/vim-jinja'
 Plug 'othree/html5.vim'
+Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 if has('nvim')
