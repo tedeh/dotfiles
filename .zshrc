@@ -40,7 +40,7 @@ export GIT_EDITOR=vim
 
 # see https://zsh.sourceforge.io/Doc/Release/Prompt-Expansion.html
 export PROMPT="%{$fg[yellow]%}[%D{%F} %T] %{$fg[red]%}%n %{$fg[blue]%}%2d%{$reset_color%} %{$fg[cyan]%}λ%{$reset_color%} "
-export RPROMPT='${vcs_info_msg_0_} %{$fg[green]%}%m%{$reset_color%}'
+export RPROMPT='${vcs_info_msg_0_}%{$fg[green]%}%m%{$reset_color%}'
 
 export HISTFILE=~/.histfile
 export HISTSIZE=2000
