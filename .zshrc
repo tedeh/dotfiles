@@ -33,12 +33,18 @@ precmd() {
 
 export EDITOR=vim
 export GIT_EDITOR=vim
-export PROMPT="%{$fg[green]%}%n@%M%{$reset_color%} %{$fg[blue]%}%~%{$reset_color%} %{$fg[yellow]%}✯%{$reset_color%} "
-export RPROMPT='${vcs_info_msg_0_}[%{$fg[yellow]%}%?%{$reset_color%}]'
+
+# old stuff
+#export PROMPT="%{$fg[green]%}%n@%m%{$reset_color%} %{$fg[blue]%}%~%{$reset_color%} %{$fg[yellow]%}✯%{$reset_color%} "
+#export RPROMPT='${vcs_info_msg_0_}[%{$fg[yellow]%}%?%{$reset_color%}]'
+
+# see https://zsh.sourceforge.io/Doc/Release/Prompt-Expansion.html
+export PROMPT="%{$fg[yellow]%}[%D{%F} %T] %{$fg[red]%}%n %{$fg[blue]%}%2d%{$reset_color%} %{$fg[cyan]%}λ%{$reset_color%} "
+export RPROMPT='${vcs_info_msg_0_}%{$fg[green]%}%m%{$reset_color%}'
 
 export HISTFILE=~/.histfile
-export HISTSIZE=1000
-export SAVEHIST=1000
+export HISTSIZE=2000
+export SAVEHIST=2000
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
@@ -46,6 +52,23 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias lsof='lsof -P'
 alias tree='tree -C'
+
+# this alias opens vim tabs with all ack search results, automatically searching in vim
+# $1 = ack search string
+# $2 = (optional) directory, defaults to cwd
+vick () {
+  if [ "$2" != "" ]
+  then
+    vim -c "/$1" -p `ack -l $1 $2`
+  else
+    vim -c "/$1" -p `ack -l $1 .`
+  fi
+}
+
+# alias commits everything in v
+gitca () {
+  git commit -am $1
+}
 
 if [[ -r ~/.zshrc.local ]]; then
   source ~/.zshrc.local
