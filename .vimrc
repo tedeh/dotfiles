@@ -43,6 +43,9 @@ Plug 'lepture/vim-jinja'
 Plug 'othree/html5.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+" normally php plugins are commented
+Plug 'StanAngeloff/php.vim'
+" Plug 'shawncplus/phpcomplete.vim'
 
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -144,6 +147,11 @@ autocmd BufRead,BufNewFile *.jack set filetype=c
 "autocmd BufRead,BufNewFile *.js set foldmethod=syntax
 "autocmd BufWritePost,BufLeave,WinLeave *.* mkview!
 "autocmd BufWinEnter *.* silent loadview
+
+" php extension 
+let g:php_html_load = 1
+let g:php_html_in_heredoc = 0
+let g:php_html_in_nowdoc = 0
 
 " for hex editing of .bin files
 augroup Binary
