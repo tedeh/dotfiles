@@ -24,6 +24,7 @@ zstyle ':completion:*' verbose yes
 zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
 zstyle ':completion:*' special-dirs true
 zstyle ':completion:*' group-name ''
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:git*' formats "%{$fg[grey]%}%s [%{$fg[blue]%}%b]%{$reset_color%}%m%u%c%{$reset_color%} "
 
