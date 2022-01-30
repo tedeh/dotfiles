@@ -1,8 +1,3 @@
-" execute python3, see https://github.com/Valloric/MatchTagAlways/issues/44
-if has('python3')
-  silent! python3 1
-endif
-
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -31,7 +26,6 @@ Plug 'elzr/vim-json'
 Plug 'tobyS/vip'
 " Plug 'mattn/emmet-vim'
 Plug 'vim-scripts/svg.vim'
-Plug 'valloric/MatchTagAlways'
 Plug 'nono/vim-handlebars'
 Plug 'tomtom/tcomment_vim'
 Plug 'iloginow/vim-stylus'
