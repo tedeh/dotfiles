@@ -25,7 +25,7 @@ Plug 'Townk/vim-autoclose'
 Plug 'elzr/vim-json'
 Plug 'tobyS/vip'
 " Plug 'mattn/emmet-vim'
-Plug 'vim-scripts/svg.vim'
+#Plug 'vim-scripts/svg.vim' # crap indentation
 Plug 'nono/vim-handlebars'
 Plug 'tomtom/tcomment_vim'
 Plug 'iloginow/vim-stylus'
@@ -34,11 +34,11 @@ Plug 'leafgarland/typescript-vim'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'rking/ag.vim'
 Plug 'lepture/vim-jinja'
-Plug 'othree/html5.vim'
+"Plug 'othree/html5.vim' " crap indentation
 Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 " normally php plugins are commented
-Plug 'StanAngeloff/php.vim'
+" Plug 'StanAngeloff/php.vim'
 " Plug 'shawncplus/phpcomplete.vim'
 
 if has('nvim')
@@ -96,6 +96,8 @@ set tabpagemax=100
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#whitespace#enabled = 0
+let g:airline#extensions#searchcount#enabled = 0
+
 let c_no_comment_fold = 1
 let g:javascript_plugin_jsdoc = 1
 
@@ -137,6 +139,8 @@ autocmd BufRead,BufNewFile * set foldmethod=manual
 autocmd BufRead,BufNewFile *.go set filetype=go
 autocmd BufRead,BufNewFile *.go setlocal shiftwidth=4 tabstop=4 noexpandtab
 autocmd BufRead,BufNewFile *.jack set filetype=c
+autocmd BufRead,BufNewFile *.html set filetype=xml
+autocmd BufRead,BufNewFile *.svg set filetype=xml
 " autocmd BufRead,BufNewFile *.md setlocal textwidth=80
 "autocmd BufRead,BufNewFile *.js set foldmethod=syntax
 "autocmd BufWritePost,BufLeave,WinLeave *.* mkview!
