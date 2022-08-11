@@ -25,7 +25,7 @@ Plug 'Townk/vim-autoclose'
 Plug 'elzr/vim-json'
 Plug 'tobyS/vip'
 " Plug 'mattn/emmet-vim'
-#Plug 'vim-scripts/svg.vim' # crap indentation
+"#Plug 'vim-scripts/svg.vim' # crap indentation
 Plug 'nono/vim-handlebars'
 Plug 'tomtom/tcomment_vim'
 Plug 'iloginow/vim-stylus'
