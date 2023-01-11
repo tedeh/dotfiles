@@ -66,6 +66,16 @@ vick () {
   fi
 }
 
+# same as vick but opens nvim instead
+nvick () {
+  if [ "$2" != "" ]
+  then
+    nvim -c "/$1" -p `ack -l $1 $2`
+  else
+    nvim -c "/$1" -p `ack -l $1 .`
+  fi
+}
+
 # alias commits everything in v
 gitca () {
   git commit -am $1

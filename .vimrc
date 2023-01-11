@@ -6,49 +6,30 @@ endif
 
 " Plug plugins
 call plug#begin('~/.vim/plugged')
-Plug 'gmarik/vundle'
+Plug 'HerringtonDarkholme/yats.vim'
 Plug 'bling/vim-airline'
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'digitaltoad/vim-pug'
+Plug 'elzr/vim-json'
+Plug 'fatih/vim-go'
+Plug 'gmarik/vundle'
+Plug 'hail2u/vim-css3-syntax'
+Plug 'iloginow/vim-stylus'
+Plug 'jiangmiao/auto-pairs'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'leafgarland/typescript-vim'
+Plug 'lepture/vim-jinja'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'nono/vim-handlebars'
+Plug 'othree/xml.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'rking/ag.vim'
+Plug 'sheerun/vim-polyglot'
+Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-surround'
-Plug 'digitaltoad/vim-pug'
-Plug 'cakebaker/scss-syntax.vim'
-Plug 'hail2u/vim-css3-syntax'
 Plug 'vim-scripts/L9'
 Plug 'vim-scripts/taglist.vim'
-" Plug 'StanAngeloff/php.vim'
-" Plug '2072/PHP-Indenting-for-VIm'
-" Plug 'shawncplus/phpcomplete.vim'
-Plug 'maxmellon/vim-jsx-pretty'
-Plug 'pangloss/vim-javascript'
-Plug 'othree/xml.vim'
-Plug 'Townk/vim-autoclose'
-Plug 'elzr/vim-json'
-Plug 'tobyS/vip'
-" Plug 'mattn/emmet-vim'
-"#Plug 'vim-scripts/svg.vim' # crap indentation
-Plug 'nono/vim-handlebars'
-Plug 'tomtom/tcomment_vim'
-Plug 'iloginow/vim-stylus'
-Plug 'fatih/vim-go'
-Plug 'leafgarland/typescript-vim'
-Plug 'HerringtonDarkholme/yats.vim'
-Plug 'rking/ag.vim'
-Plug 'lepture/vim-jinja'
-"Plug 'othree/html5.vim' " crap indentation
-Plug 'sheerun/vim-polyglot'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-" normally php plugins are commented
-" Plug 'StanAngeloff/php.vim'
-" Plug 'shawncplus/phpcomplete.vim'
-
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-  Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
-else
-  " Plug 'Shougo/deoplete.nvim'
-  " Plug 'roxma/nvim-yarp'
-  " Plug 'roxma/vim-hug-neovim-rpc'
-endif
 
 call plug#end()
 
@@ -68,9 +49,9 @@ map <C-l> <C-W>l
 map <C-Left> :tabp<CR>
 map <C-Right> :tabn<CR>
 
+set term=xterm-256color
 set encoding=utf-8
 set nocompatible
-set term=xterm-256color
 set softtabstop=2
 set tabpagemax=40
 set tabstop=2
@@ -141,7 +122,7 @@ autocmd BufRead,BufNewFile *.go setlocal shiftwidth=4 tabstop=4 noexpandtab
 autocmd BufRead,BufNewFile *.jack set filetype=c
 autocmd BufRead,BufNewFile *.html set filetype=xml
 autocmd BufRead,BufNewFile *.svg set filetype=xml
-" autocmd BufRead,BufNewFile *.md setlocal textwidth=80
+"autocmd BufRead,BufNewFile *.md setlocal textwidth=80
 "autocmd BufRead,BufNewFile *.js set foldmethod=syntax
 "autocmd BufWritePost,BufLeave,WinLeave *.* mkview!
 "autocmd BufWinEnter *.* silent loadview
