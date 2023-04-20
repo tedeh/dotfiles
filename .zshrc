@@ -1,6 +1,6 @@
 autoload -U colors && colors
 autoload -U promptinit && promptinit
-autoload -U compinit && compinit
+autoload -Uz compinit && compinit
 autoload -Uz vcs_info
 
 setopt completealiases 
