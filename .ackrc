@@ -4,5 +4,6 @@
 --type-set=pdf=.pdf
 --type-add=css=.scss
 --type-set=ignore=.scssc
+--ignore-dir=node_modules
 --noignore
 --nopdf

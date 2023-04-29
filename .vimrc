@@ -17,7 +17,7 @@ Plug 'hail2u/vim-css3-syntax'
 Plug 'iloginow/vim-stylus'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'leafgarland/typescript-vim'
+"Plug 'leafgarland/typescript-vim'
 Plug 'lepture/vim-jinja'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'nono/vim-handlebars'
@@ -122,6 +122,7 @@ autocmd BufRead,BufNewFile *.go setlocal shiftwidth=4 tabstop=4 noexpandtab
 autocmd BufRead,BufNewFile *.jack set filetype=c
 autocmd BufRead,BufNewFile *.html set filetype=xml
 autocmd BufRead,BufNewFile *.svg set filetype=xml
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 "autocmd BufRead,BufNewFile *.md setlocal textwidth=80
 "autocmd BufRead,BufNewFile *.js set foldmethod=syntax
 "autocmd BufWritePost,BufLeave,WinLeave *.* mkview!
