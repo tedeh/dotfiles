@@ -31,7 +31,7 @@ Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/L9'
 Plug 'vim-scripts/taglist.vim'
-
+Plug 'NoahTheDuke/vim-just'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
