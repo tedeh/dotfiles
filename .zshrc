@@ -1,3 +1,6 @@
+if [[ -r ~/.zshrc_head.local ]]; then
+  source ~/.zshrc_head.local
+fi
 autoload -U colors && colors
 autoload -U promptinit && promptinit
 autoload -Uz compinit && compinit
