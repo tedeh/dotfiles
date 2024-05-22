@@ -118,6 +118,7 @@ autocmd BufRead,BufNewFile *.scss set filetype=scss
 autocmd BufRead,BufNewFile *.plist set filetype=xml
 autocmd BufRead,BufNewFile * set foldmethod=manual
 autocmd BufRead,BufNewFile *.go set filetype=go
+autocmd BufRead,BufNewFile *.php set shiftwidth=2 noexpandtab
 autocmd BufRead,BufNewFile *.go setlocal shiftwidth=4 tabstop=4 noexpandtab
 autocmd BufRead,BufNewFile *.jack set filetype=c
 autocmd BufRead,BufNewFile *.html set filetype=xml

@@ -113,12 +113,16 @@ autocmd BufRead,BufNewFile *.plist set filetype=xml
 autocmd BufRead,BufNewFile *.html set filetype=html
 autocmd BufRead,BufNewFile * set foldmethod=manual
 autocmd BufRead,BufNewFile *.go set filetype=go
+autocmd BufRead,BufNewFile *.php setlocal shiftwidth=2 tabstop=2 expandtab
 autocmd BufRead,BufNewFile *.go setlocal shiftwidth=4 tabstop=4 noexpandtab
+autocmd BufRead,BufNewFile *.yml setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd BufRead,BufNewFile *.blade.php setlocal shiftwidth=2 tabstop=2 expandtab
 autocmd BufRead,BufNewFile *.jack set filetype=c
 " autocmd BufRead,BufNewFile *.md setlocal textwidth=80
 "autocmd BufRead,BufNewFile *.js set foldmethod=syntax
 "autocmd BufWritePost,BufLeave,WinLeave *.* mkview!
 "autocmd BufWinEnter *.* silent loadview
+autocmd FileType html setlocal shiftwidth=2 tabstop=2
 
 " for hex editing of .bin files
 augroup Binary

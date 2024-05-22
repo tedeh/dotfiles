@@ -25,6 +25,7 @@ zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
 zstyle ':completion:*' special-dirs true
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+zstyle ':completion:*:ssh:*' hosts ${(s: :)${(f)"$(grep '^Host ' ~/.ssh/config | awk '{print $2}')"}}
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:git*' formats "%{$fg[grey]%}%s [%{$fg[blue]%}%b]%{$reset_color%}%m%u%c%{$reset_color%} "
 
@@ -90,3 +91,5 @@ typeset -aU path
 path=($path)
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+source /Users/tedeh/.docker/init-zsh.sh || true # Added by Docker Desktop
