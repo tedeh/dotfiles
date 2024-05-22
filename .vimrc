@@ -124,7 +124,7 @@ autocmd BufRead,BufNewFile *.jack set filetype=c
 autocmd BufRead,BufNewFile *.html set filetype=xml
 autocmd BufRead,BufNewFile *.svg set filetype=xml
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
-"autocmd BufRead,BufNewFile *.md setlocal textwidth=80
+autocmd BufRead,BufNewFile *.md setlocal wrap textwidth=80 wrapmargin=0 linebreak colorcolumn=80
 "autocmd BufRead,BufNewFile *.js set foldmethod=syntax
 "autocmd BufWritePost,BufLeave,WinLeave *.* mkview!
 "autocmd BufWinEnter *.* silent loadview
