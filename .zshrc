@@ -30,7 +30,7 @@ zstyle ':completion:*' group-name ''
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 zstyle ':completion:*:ssh:*' hosts ${(s: :)${(f)"$(grep '^Host ' ~/.ssh/config | awk '{print $2}')"}}
 zstyle ':vcs_info:*' enable git
-zstyle ':vcs_info:git*' formats "%{$fg[grey]%}%s [%{$fg[blue]%}%b]%{$reset_color%}%m%u%c%{$reset_color%} "
+zstyle ':vcs_info:git*' formats "%{$fg[grey]%}%s %{$fg[blue]%}[%b]%{$reset_color%}%m%u%c%{$reset_color%} "
 
 precmd() {
   vcs_info
