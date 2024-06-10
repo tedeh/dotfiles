@@ -94,5 +94,3 @@ typeset -aU path
 path=($path)
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-source /Users/tedeh/.docker/init-zsh.sh || true # Added by Docker Desktop
