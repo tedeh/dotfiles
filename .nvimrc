@@ -77,6 +77,10 @@ set laststatus=2
 set tags=./tags,/
 set tabpagemax=100
 
+" reverts neovim 0.10 color scheme changes
+set notermguicolors
+colorscheme vim
+
 let g:fzf_layout = { 'up': '~40%' }
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#whitespace#enabled = 0
