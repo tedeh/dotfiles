@@ -10,3 +10,6 @@
 	ignore = dirty
 [push]
 	default = current
+	recurseSubmodules = on-demand
+[submodule]
+	recurse = true
