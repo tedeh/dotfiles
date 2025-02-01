@@ -93,4 +93,5 @@ fi
 typeset -aU path
 path=($path)
 
+export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow --exclude .git'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

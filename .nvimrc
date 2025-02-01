@@ -49,8 +49,8 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 " Switch tab with Ctrl + left/right
-map <C-Left> :tabp<CR>
-map <C-Right> :tabn<CR>
+map <C-N> :tabp<CR>
+map <C-M> :tabn<CR>
 
 set encoding=utf-8
 set nocompatible
