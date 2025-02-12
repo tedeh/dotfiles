@@ -28,6 +28,7 @@ Plug 'rking/ag.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-markdown'
+Plug 'amadeus/vim-mjml'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/L9'
 Plug 'vim-scripts/taglist.vim'
@@ -131,6 +132,7 @@ autocmd BufRead,BufNewFile *.php setlocal shiftwidth=2 tabstop=2 expandtab
 autocmd BufRead,BufNewFile *.go setlocal shiftwidth=4 tabstop=4 noexpandtab
 autocmd BufRead,BufNewFile *.yml setlocal shiftwidth=2 tabstop=2 expandtab
 autocmd BufRead,BufNewFile *.blade.php setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd BufRead,BufNewFile *.mjml.blade.php setlocal shiftwidth=2 tabstop=2 expandtab filetype=mjml
 autocmd BufRead,BufNewFile *.jack set filetype=c
 " autocmd BufRead,BufNewFile *.md setlocal textwidth=80
 "autocmd BufRead,BufNewFile *.js set foldmethod=syntax
