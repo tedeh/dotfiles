@@ -81,6 +81,9 @@ set tabpagemax=100
 set notermguicolors
 colorscheme vim
 
+" leader is comma
+let mapleader = ","
+
 let g:fzf_layout = { 'up': '~40%' }
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#whitespace#enabled = 0
@@ -100,6 +103,13 @@ let g:go_fmt_autosave = 1
 let g:go_highlight_functions = 0
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 0
+
+
+" leader+Y to copy entire file on MacOS
+nnoremap <leader>Y :silent %w !pbcopy<CR><CR>
+
+" leader+y copies visual selection on MacOS
+xnoremap <leader>y :<C-u>silent '<,'>w !pbcopy<CR><CR>
 
 au FileType go nmap <Leader>ds <Plug>(go-def-split)
 au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
