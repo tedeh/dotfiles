@@ -85,13 +85,14 @@ gitca () {
   git commit -am $1
 }
 
+export FZF_DEFAULT_COMMAND='fdfind --type f --strip-cwd-prefix --hidden --follow --exclude .git'
+
 if [[ -r ~/.zshrc.local ]]; then
   source ~/.zshrc.local
 fi
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # Make all entries in $path unique
 typeset -aU path
 path=($path)
-
-export FZF_DEFAULT_COMMAND='fdfind --type f --strip-cwd-prefix --hidden --follow --exclude .git'
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
