@@ -87,6 +87,8 @@ gitca () {
 
 export FZF_DEFAULT_COMMAND='fdfind --type f --strip-cwd-prefix --hidden --follow --exclude .git'
 
+export PAGER="less -SFXR"
+
 if [[ -r ~/.zshrc.local ]]; then
   source ~/.zshrc.local
 fi
