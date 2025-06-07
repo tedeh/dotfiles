@@ -98,3 +98,7 @@ fi
 # Make all entries in $path unique
 typeset -aU path
 path=($path)
+
+# if gpg is installed this is helpful for sops
+GPG_TTY=$(tty)
+export GPG_TTY
