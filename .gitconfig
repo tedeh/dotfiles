@@ -5,6 +5,7 @@
 [user]
 	name = Tedde Lundgren
 	email = mail@tedeh.net
+	signingKey = 1AF854825FFA226F19549246A30FF392F1B4F8B5
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore
@@ -15,3 +16,5 @@
 	recurseSubmodules = on-demand
 [submodule]
 	recurse = true
+[commit]
+	gpgsign = yes
