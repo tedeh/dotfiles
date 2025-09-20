@@ -34,6 +34,7 @@ Plug 'vim-scripts/L9'
 Plug 'vim-scripts/taglist.vim'
 Plug 'NoahTheDuke/vim-just'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'tpope/vim-abolish'
 
 call plug#end()
 
